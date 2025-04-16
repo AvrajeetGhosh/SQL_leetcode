@@ -166,7 +166,7 @@ Follow these steps:
 📬 Contact & Feedback
 Got ideas or feedback? Let us know!
 - Open a serious GitHub issue here.
-- Email: avrajeet2003@example.com
+- Email: avrajeet2003@gmail.com
 
 
 ✨ Additional Features
