@@ -7,7 +7,7 @@ Welcome to the repository of SQL solutions for LeetCode problems. This is a cura
 ## 🗂 Table of Contents
 1. [About the Repository](#about-the-repository)
 2. [LeetCode Problems Overview](#leetcode-problems-overview)
-3. [Understanding Joins and Keys](#[understanding-joins-and-keys](https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/))
+3. [Understanding Joins and Keys](#(https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/))
 4. [Advanced SQL Concepts](#advanced-sql-concepts)
 5. [Folder Structure](#folder-structure)
 6. [How to Contribute](#how-to-contribute)
