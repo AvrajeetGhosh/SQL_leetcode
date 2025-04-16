@@ -6,12 +6,13 @@ Welcome to the repository of SQL solutions for LeetCode problems. This is a cura
 
 ## 🗂 Table of Contents
 1. [About the Repository](#about-the-repository)
-2. [LeetCode Problems Overview](#leetcode-problems-overview)
+2. [LeetCode Problems Overview](https://leetcode.com/studyplan/top-sql-50/)
 3. [Understanding Joins and Keys](https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/)
-4. [Advanced SQL Concepts](#advanced-sql-concepts)
-5. [Folder Structure](#folder-structure)
-6. [How to Contribute](#how-to-contribute)
-7. [Contact & Feedback](#contact--feedback)
+4. [Advanced SQL Concepts](https://airbyte.com/data-engineering-resources/advanced-sql-concepts)
+5. [Sub-Query Concepts](https://www.geeksforgeeks.org/sql-subquery/)
+6. [Folder Structure](#folder-structure)
+7. [How to Contribute](#how-to-contribute)
+8. [Contact & Feedback](#contact--feedback)
 
 ---
 
@@ -70,7 +71,7 @@ CREATE TABLE employees (
 ```
 
 
-# ⚙️ Advanced SQL Concepts
+## ⚙️ Advanced SQL Concepts
 ## Take your SQL skills to the next level with these techniques:
 - Common Table Expressions (CTEs)
 CTEs simplify complex queries and make them more readable.
@@ -101,6 +102,42 @@ SELECT department_id,
        SUM(CASE WHEN gender = 'Female' THEN 1 ELSE 0 END) AS female_count
 FROM employees
 GROUP BY department_id;
+```
+## 🔎 Subqueries
+### Subqueries allow you to nest queries within other queries to perform calculations dynamically. They are useful for filtering, aggregating, and manipulating data efficiently.
+Types of Subqueries
+- Scalar Subquery - Returns a single value.
+- Multi-row Subquery - Returns multiple rows for comparison.
+- Correlated Subquery - Uses values from the outer query.
+
+- Example: Finding Employees with Above-Average Salary
+```SQL
+SELECT employee_id, name, salary
+FROM employees
+WHERE salary > (
+    SELECT AVG(salary) 
+    FROM employees
+);
+```
+- Example: Using a Subquery in a FROM Clause
+```SQL
+SELECT department_id, avg_salary
+FROM (
+    SELECT department_id, AVG(salary) AS avg_salary
+    FROM employees
+    GROUP BY department_id
+) AS department_avg
+WHERE avg_salary > 50000;
+```
+- Example: Correlated Subquery to Find Top Performers
+```SQL
+SELECT e1.name, e1.salary
+FROM employees e1
+WHERE e1.salary > (
+    SELECT AVG(e2.salary) 
+    FROM employees e2 
+    WHERE e1.department_id = e2.department_id
+);
 ```
 
 📁 Folder Structure
