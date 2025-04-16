@@ -56,7 +56,7 @@ INNER JOIN departments d
 ON e.department_id = d.department_id;
 ```
 
-Keys
+### Keys
 Keys are crucial for defining relationships and ensuring data integrity:
 - Primary Key: Ensures each row in a table is unique.
 - Foreign Key: Links two tables by referring to the primary key of another table.
