@@ -63,6 +63,7 @@ The customers who bought all the products (5 and 6) are customers with IDs 1 and
 
 SOLUTION:
 
+
 SELECT c.customer_id
 FROM Customer c
 GROUP BY c.customer_id
